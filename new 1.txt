@@ -1,0 +1,16 @@
+<?php
+		$link = mysqli_connect("localhost","root","","simple") or die("connection error");
+		
+		if(empty($_POST))
+		{
+			header("location: reg_form.html");
+		}
+		
+		$ins_q = "insert into user(first_name,last_name,birthday,gender,D_ID,address,phone) values('".$_POST["first_name"]."','".$_POST["last_name"]."','".$_POST["birthday"]."','".$_POST["gender"]."','".$_POST["D_ID"]."','".$_POST["address"]."','".$_POST["phone"]."')";
+		mysqli_query($link, $ins_q) or die("Query not execute");
+		
+		echo "NEW RECORD INSERTED SUCCESFULLY"; 
+
+
+
+?>
