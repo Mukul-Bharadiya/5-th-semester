@@ -1,2 +1,2 @@
 # 5-th-semester
-software licence management system
+Software Licence Management System(SLMS)
